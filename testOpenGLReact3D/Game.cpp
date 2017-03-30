@@ -23,11 +23,24 @@ void Game::ExampleTestInit()
 	World->setNbIterationsVelocitySolver(15);
 	World->setNbIterationsPositionSolver(8);
 
+	
+	//TEMPORARY DATA FOR INITIALIZATION
+	rp3d::Vector3 initPosition;
+	rp3d::Quaternion initOrientation;
+	rp3d::Vector3 shapeData;
+
 	//FLOOR
-	floor = new BodyObj(this->World, 10, 0.5, 10);
+	initPosition.setAllValues(0.0, -1.0, 0.0);
+	initOrientation = rp3d::Quaternion::identity();
+	shapeData.setAllValues(10, 0.5, 10);
+	floor = new BodyObj(this->World, initPosition, initOrientation, shapeData);
 	floor->setType(1);
 	
-	obj1 = new BodyObj(this->World,1,1,1);
+	//OBJ
+	initPosition.setAllValues(0.0, 2.0, 0.0);
+	initOrientation = rp3d::Quaternion::identity();
+	shapeData.setAllValues(0.5, 0.5, 0.5);
+	obj1 = new BodyObj(this->World, initPosition, initOrientation, shapeData);
 }
 
 void Game::Draw_floor(float m[16])
@@ -43,7 +56,7 @@ void Game::Draw_floor(float m[16])
 
 void Game::Draw_1(float m[16])
 {
-
+	obj1->Draw(m);
 }
 
 void Game::Update()

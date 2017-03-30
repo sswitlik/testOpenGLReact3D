@@ -14,24 +14,28 @@ int rotator = 0; bool bckfor = true; int LPP = GLUT_UP;
 void Display()
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+	glEnable(GL_DEPTH_TEST);
 	gluLookAt(eyex, eyey, eyez, 0, 0, 0, 0, 1, 0);
 
 	float matrix[16];
+	
+	
+
 	glPushMatrix();
 		matrix[16];
 		game.Draw_floor(matrix);
 		glMultMatrixf(matrix);
-		glScalef(20, 1, 20);
+		glScalef(10, 1, 10);
 		glColor3f(0.5, 0, 0);
 		glutSolidCube(1);
 	glPopMatrix();
 
 	glPushMatrix();
 		matrix[16];
-		game.Draw_floor(matrix);
+		game.Draw_1(matrix);
 		glMultMatrixf(matrix);
 		//glScalef(20, 1, 20);
 		glColor3f(0, 0, 0.5);
@@ -123,7 +127,7 @@ void MouseMotion(int x, int y)
 int main(int argc, char * argv[])
 {
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(400, 400);
 	glutInitWindowPosition(5, 5);
 	glutCreateWindow("Kwadrat 1");

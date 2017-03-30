@@ -4,7 +4,7 @@
 class BodyObj
 {
 public:
-	BodyObj(rp3d::DynamicsWorld *world, float x, float y, float z);
+	BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData);
 	~BodyObj();
 	void Draw(float m[16]);
 	void setType(int type);

@@ -1,15 +1,15 @@
 #include "stdafx.h"
 #include "BodyObj.h"
 
-BodyObj::BodyObj(rp3d::DynamicsWorld *world, float x, float y, float z)
+BodyObj::BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData)
 {
-	rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
-	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
+	//rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
+	//initOrientation = rp3d::Quaternion::identity();
 	rp3d::Transform transform(initPosition, initOrientation);
 	body = world->createRigidBody(transform);
 
-	const rp3d::Vector3 bshape(x, y, z);
-	shape = new rp3d::BoxShape(bshape);
+	//const rp3d::Vector3 shapeData(x, y, z);
+	shape = new rp3d::BoxShape(shapeData);
 
 	rp3d::Transform transform2 = rp3d::Transform::identity();
 	rp3d::decimal mass = rp3d::decimal(4.0);
