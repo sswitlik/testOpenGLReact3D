@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CheckCXXCompilerFlag.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CheckCXXSourceCompiles.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake

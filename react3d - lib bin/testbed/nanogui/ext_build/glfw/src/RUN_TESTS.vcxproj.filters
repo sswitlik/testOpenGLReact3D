@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\biblioteki\react3d\CMakeFiles\6ff3c8e6ec5fb31ba2f24d104e88093d\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0F23981F-37EC-31CC-A776-D452F92275D9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

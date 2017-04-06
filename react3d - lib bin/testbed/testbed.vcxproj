@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{70F55388-282B-379E-8F66-0B0749338F70}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>testbed</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Programowanie\biblioteki\react3d\bin\testbed\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">testbed.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">testbed</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Programowanie\biblioteki\react3d\bin\testbed\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">testbed.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">testbed</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Programowanie\biblioteki\react3d\bin\testbed\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">testbed.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">testbed</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Programowanie\biblioteki\react3d\bin\testbed\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">testbed.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">testbed</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\Debug\reactphysics3d.lib;nanogui\lib\Debug\nanogui.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programowanie/biblioteki/react3d/bin/testbed/Debug/testbed.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programowanie/biblioteki/react3d/bin/testbed/testbed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\Release\reactphysics3d.lib;nanogui\lib\Release\nanogui.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programowanie/biblioteki/react3d/bin/testbed/Release/testbed.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programowanie/biblioteki/react3d/bin/testbed/testbed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\MinSizeRel\reactphysics3d.lib;nanogui\lib\MinSizeRel\nanogui.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programowanie/biblioteki/react3d/bin/testbed/MinSizeRel/testbed.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programowanie/biblioteki/react3d/bin/testbed/MinSizeRel/testbed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\src;C:\Programowanie\react3d\reactphysics3d\testbed\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src;C:\Programowanie\react3d\reactphysics3d\testbed\common;C:\Programowanie\react3d\reactphysics3d\testbed\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\lib\RelWithDebInfo\reactphysics3d.lib;nanogui\lib\RelWithDebInfo\nanogui.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programowanie/biblioteki/react3d/bin/testbed/RelWithDebInfo/testbed.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programowanie/biblioteki/react3d/bin/testbed/RelWithDebInfo/testbed.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;C:\Programowanie\biblioteki\react3d\CMakeFiles\3.7.2\CMakeCCompiler.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\VisualStudioUserTemplate.user;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;C:\Programowanie\biblioteki\react3d\CMakeFiles\3.7.2\CMakeCCompiler.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\VisualStudioUserTemplate.user;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;C:\Programowanie\biblioteki\react3d\CMakeFiles\3.7.2\CMakeCCompiler.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\VisualStudioUserTemplate.user;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;C:\Programowanie\biblioteki\react3d\CMakeFiles\3.7.2\CMakeCCompiler.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\VisualStudioUserTemplate.user;C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Programowanie\biblioteki\react3d\testbed\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\TestbedApplication.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Gui.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Scene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\SceneDemo.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Timer.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\cubes\CubesScene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\joints\JointsScene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\raycast\RaycastScene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\collisionshapes\CollisionShapesScene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\concavemesh\ConcaveMeshScene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\heightfield\HeightFieldScene.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Box.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cone.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Sphere.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Line.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Capsule.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConvexMesh.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConcaveMesh.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cylinder.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Dumbbell.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\HeightField.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PhysicsObject.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\VisualContactPoint.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PerlinNoise.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Color.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Matrix3.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Matrix4.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Vector2.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Vector3.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Vector4.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Camera.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\definitions.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\FrameBufferObject.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Light.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Mesh.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\MeshReaderWriter.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Object3D.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\openglframework.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Shader.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Texture2D.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\TextureReaderWriter.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexBufferObject.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexArrayObject.h" />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Main.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\TestbedApplication.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Gui.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Scene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\SceneDemo.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Timer.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\cubes\CubesScene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\joints\JointsScene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\raycast\RaycastScene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\collisionshapes\CollisionShapesScene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\concavemesh\ConcaveMeshScene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\heightfield\HeightFieldScene.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Box.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cone.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Sphere.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Line.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Capsule.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConvexMesh.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConcaveMesh.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cylinder.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Dumbbell.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\HeightField.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PhysicsObject.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\VisualContactPoint.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PerlinNoise.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Camera.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\FrameBufferObject.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Light.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Mesh.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\MeshReaderWriter.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Object3D.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Shader.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Texture2D.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\TextureReaderWriter.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexBufferObject.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexArrayObject.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Programowanie/biblioteki/react3d/ZERO_CHECK.vcxproj">
+      <Project>1F1BABA9-B540-3A3A-915B-678101153234</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Programowanie/biblioteki/react3d/testbed/nanogui/nanogui.vcxproj">
+      <Project>956EFE37-B134-346D-8D99-E6E35C13604A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Programowanie/biblioteki/react3d/reactphysics3d.vcxproj">
+      <Project>2039D335-1ADA-3CBC-978A-8AC8A1456C4D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

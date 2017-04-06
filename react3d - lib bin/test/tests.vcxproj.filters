@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\test\Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\test\TestSuite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\test\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\Test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\TestSuite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\collision\TestAABB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\collision\TestCollisionWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\collision\TestDynamicAABBTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\collision\TestPointInside.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\collision\TestRaycast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestMathematicsFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestMatrix2x2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestMatrix3x3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestQuaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestVector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\test\tests\mathematics\TestVector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\react3d\reactphysics3d\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Programowanie\react3d\reactphysics3d\test\.DS_Store" />
+    <None Include="C:\Programowanie\react3d\reactphysics3d\test\tests\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{92A589FC-5171-3932-8F3C-E63C9A6FB50C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1F2DD1AE-EEAC-3742-B3AD-711F1F0A7636}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

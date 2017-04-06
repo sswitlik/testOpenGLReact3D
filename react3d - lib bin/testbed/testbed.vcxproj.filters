@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\TestbedApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\SceneDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\cubes\CubesScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\joints\JointsScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\raycast\RaycastScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\collisionshapes\CollisionShapesScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\concavemesh\ConcaveMeshScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\heightfield\HeightFieldScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Capsule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConvexMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConcaveMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cylinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Dumbbell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\HeightField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PhysicsObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\VisualContactPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PerlinNoise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\FrameBufferObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\MeshReaderWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Object3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Texture2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\TextureReaderWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexBufferObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexArrayObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\TestbedApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\SceneDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\src\Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\cubes\CubesScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\joints\JointsScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\raycast\RaycastScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\collisionshapes\CollisionShapesScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\concavemesh\ConcaveMeshScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\scenes\heightfield\HeightFieldScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Capsule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConvexMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\ConcaveMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Cylinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\Dumbbell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\HeightField.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PhysicsObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\VisualContactPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\common\PerlinNoise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Matrix3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Matrix4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Vector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\maths\Vector4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\definitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\FrameBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\MeshReaderWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Object3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\openglframework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\Texture2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\TextureReaderWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexBufferObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\opengl-framework\src\VertexArrayObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\react3d\reactphysics3d\testbed\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{92A589FC-5171-3932-8F3C-E63C9A6FB50C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1F2DD1AE-EEAC-3742-B3AD-711F1F0A7636}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

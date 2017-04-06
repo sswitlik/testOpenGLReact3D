@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\context.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\init.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\input.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\monitor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\window.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_init.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_monitor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_time.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_tls.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_window.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\winmm_joystick.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\wgl_context.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{28CD0949-6E5D-3BCC-82EE-3CE8A24AB228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{BFC82682-B217-3A4C-A2E5-3F8FC3A434A8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

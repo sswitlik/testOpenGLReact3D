@@ -1,0 +1,21 @@
+# CMake generation dependency list for this directory.
+C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/ext/glfw/CMakeLists.txt
+C:/Programowanie/CMake/share/cmake-3.7/Modules/FindOpenGL.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/FindThreads.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CheckLibraryExists.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CheckSymbolExists.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CheckIncludeFile.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CMakePackageConfigHelpers.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/WriteBasicConfigVersionFile.cmake
+C:/Programowanie/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/ext/glfw/src/glfw3Config.cmake.in
+C:/Programowanie/CMake/share/cmake-3.7/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/ext/glfw/src/glfw_config.h.in
+C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/ext/glfw/src/glfw3.pc.in

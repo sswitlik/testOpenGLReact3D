@@ -1,0 +1,4 @@
+C:/Programowanie/biblioteki/react3d/CMakeFiles/reactphysics3d.dir
+C:/Programowanie/biblioteki/react3d/CMakeFiles/RUN_TESTS.dir
+C:/Programowanie/biblioteki/react3d/CMakeFiles/ALL_BUILD.dir
+C:/Programowanie/biblioteki/react3d/CMakeFiles/ZERO_CHECK.dir

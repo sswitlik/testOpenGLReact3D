@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{956EFE37-B134-346D-8D99-E6E35C13604A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>nanogui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\lib\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nanogui.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nanogui</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\lib\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nanogui.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nanogui</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\lib\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">nanogui.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">nanogui</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\lib\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">nanogui.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">nanogui</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;_DEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;_DEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;NDEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;NDEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;NDEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;NDEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;NDEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;EIGEN_DONT_ALIGN;NDEBUG;_CRT_SECURE_NO_WARNINGS;NANOGUI_BUILD ;IS_PROFILING_ACTIVE;IS_DOUBLE_PRECISION_ENABLED;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programowanie\react3d\reactphysics3d\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\eigen;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glfw\include;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include;C:\Programowanie\biblioteki\react3d\testbed\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Programowanie\CMake\bin\cmake.exe -HC:/Programowanie/react3d/reactphysics3d -BC:/Programowanie/biblioteki/react3d --check-stamp-file C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/CMakeLists.txt;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Programowanie\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programowanie\biblioteki\react3d\CMakeFiles\624fc0c3045d727c4925568e79fbb791\nanogui_resources.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Running bin2c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+..\..\bin\testbed\bin2c.exe nanogui_resources.cpp nanogui_resources.h C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Bold.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Regular.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/entypo.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Programowanie/biblioteki/react3d/CMakeFiles/624fc0c3045d727c4925568e79fbb791/nanogui_resources.cpp.rule;C:\Programowanie\biblioteki\react3d\bin\testbed\bin2c.exe;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Bold.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Regular.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\entypo.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.cpp;C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Running bin2c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+..\..\bin\testbed\bin2c.exe nanogui_resources.cpp nanogui_resources.h C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Bold.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Regular.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/entypo.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Programowanie/biblioteki/react3d/CMakeFiles/624fc0c3045d727c4925568e79fbb791/nanogui_resources.cpp.rule;C:\Programowanie\biblioteki\react3d\bin\testbed\bin2c.exe;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Bold.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Regular.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\entypo.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.cpp;C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Running bin2c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+..\..\bin\testbed\MinSizeRel\bin2c.exe nanogui_resources.cpp nanogui_resources.h C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Bold.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Regular.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/entypo.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Programowanie/biblioteki/react3d/CMakeFiles/624fc0c3045d727c4925568e79fbb791/nanogui_resources.cpp.rule;C:\Programowanie\biblioteki\react3d\bin\testbed\MinSizeRel\bin2c.exe;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Bold.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Regular.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\entypo.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.cpp;C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Running bin2c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+..\..\bin\testbed\RelWithDebInfo\bin2c.exe nanogui_resources.cpp nanogui_resources.h C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Bold.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/Roboto-Regular.ttf C:/Programowanie/react3d/reactphysics3d/testbed/nanogui/resources/entypo.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Programowanie/biblioteki/react3d/CMakeFiles/624fc0c3045d727c4925568e79fbb791/nanogui_resources.cpp.rule;C:\Programowanie\biblioteki\react3d\bin\testbed\RelWithDebInfo\bin2c.exe;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Bold.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\Roboto-Regular.ttf;C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\resources\entypo.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.cpp;C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\glutil.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\common.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\widget.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\theme.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\layout.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\screen.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\label.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\window.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\popup.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\checkbox.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\button.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\popupbutton.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\combobox.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\progressbar.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\slider.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\messagedialog.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\textbox.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\imagepanel.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\imageview.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\vscrollpanel.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\colorwheel.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\colorpicker.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\graph.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\formhelper.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\toolbutton.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\opengl.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\nanogui.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\serializer\core.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\serializer\opengl.h" />
+    <ClInclude Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\include\nanogui\serializer\sparse.h" />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\nanovg\src\nanovg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4005;4456;4457;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NVG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4005;4456;4457;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NVG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">4005;4456;4457;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">NVG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">4005;4456;4457;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">NVG_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\ext\glew\src\glew.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">GLEW_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">GLEW_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">GLEW_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">GLEW_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\nanogui_resources.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\glutil.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\common.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\widget.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\theme.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\layout.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\screen.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\label.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\window.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\popup.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\checkbox.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\button.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\popupbutton.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\combobox.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\progressbar.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\slider.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\messagedialog.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\textbox.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\imagepanel.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\imageview.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\vscrollpanel.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\colorwheel.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\colorpicker.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\graph.cpp"  />
+    <ClCompile Include="C:\Programowanie\react3d\reactphysics3d\testbed\nanogui\src\serializer.cpp"  />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\context.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\init.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\input.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\monitor.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\window.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_init.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_monitor.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_time.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_tls.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\win32_window.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\winmm_joystick.obj" />
+    <Object Include="C:\Programowanie\biblioteki\react3d\testbed\nanogui\ext_build\glfw\src\glfw_objects.dir\$(Configuration)\wgl_context.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Programowanie/biblioteki/react3d/ZERO_CHECK.vcxproj">
+      <Project>1F1BABA9-B540-3A3A-915B-678101153234</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Programowanie/biblioteki/react3d/testbed/nanogui/bin2c.vcxproj">
+      <Project>DDC91B7E-21E3-35E6-A92D-6670A8519E2B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Programowanie/biblioteki/react3d/testbed/nanogui/ext_build/glfw/src/glfw_objects.vcxproj">
+      <Project>AEDD8362-1185-3E17-9E54-36AE1D91C26E</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
