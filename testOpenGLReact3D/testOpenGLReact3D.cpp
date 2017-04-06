@@ -4,9 +4,10 @@
 #include "stdafx.h"
 #include <GL\freeglut.h>
 #include "Game.h"
+#include "Camera.h"
 
 Game game;
-
+Camera cam;
 
 double eyex = 0, eyey = 0, eyez = 5;
 int rotator = 0; bool bckfor = true; int LPP = GLUT_UP;
@@ -18,8 +19,8 @@ void Display()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glEnable(GL_DEPTH_TEST);
-	gluLookAt(eyex, eyey, eyez, 0, 0, 0, 0, 1, 0);
-
+	//gluLookAt(eyex, eyey, eyez, 0, 0, 0, 0, 1, 0);
+	cam.set();
 	float matrix[16];
 	
 	
@@ -28,9 +29,11 @@ void Display()
 		matrix[16];
 		game.Draw_floor(matrix);
 		glMultMatrixf(matrix);
-		glScalef(10, 1, 10);
+		glScalef(20, 1, 20);
 		glColor3f(0.5, 0, 0);
 		glutSolidCube(1);
+		glColor3f(0, 0, 0);
+		glutWireCube(1);
 	glPopMatrix();
 
 	glPushMatrix();
@@ -40,10 +43,30 @@ void Display()
 		//glScalef(20, 1, 20);
 		glColor3f(0, 0, 0.5);
 		glutSolidCube(1);
+		glColor3f(0, 0, 0);
+		glutWireCube(1);
 	glPopMatrix();
+
+	for (int i = 0; i < game.quantity; i++)
+	{
+		glPushMatrix();
+			matrix[16];
+			game.objs[i].Draw(matrix);
+			glMultMatrixf(matrix);
+			glColor3f(1 - 0.02*i, 0, 0.02*i);
+			glutSolidCube(1);
+			glColor3f(0, 0, 0);
+			glutWireCube(1);
+		glPopMatrix();
+	}
+
+
+
 
 	glFlush();			// skierowanie poleceñ do wykonania
 	glutSwapBuffers();	// zamiana buforów koloru
+
+	//game.Update();
 }
 
 void Reshape(int width, int height)
@@ -73,13 +96,14 @@ void Keyboard(unsigned char key, int x, int y)
 	case 27:
 		exit(0);
 
-	case 'w':   eyez -= 0.1;    break;
-	case 's':   eyez += 0.1;    break;
-	case 'd':   eyex += 0.1;    break;
-	case 'a':   eyex -= 0.1;    break;
-	case 'q':   eyey += 0.1;    break;
-	case 'e':   eyey -= 0.1;    break;
-	case 'z':	game.Update();
+	case 'w':   cam.move(FORWARD);	break;
+	case 's':   cam.move(BACK);		break;
+	case 'd':   cam.rotate(RIGHT);	break;
+	case 'a':   cam.rotate(LEFT);	break;
+	case 'q':   cam.rotate(UP);	    break;
+	case 'e':   cam.rotate(DOWN);	break;
+	case 'z':	game.Update();		break;
+	case 'x':	game.plus();		break;
 	}
 
 
@@ -87,16 +111,10 @@ void Keyboard(unsigned char key, int x, int y)
 	Display();
 }
 
-static void Timer(int value) {
-	
-	glutPostRedisplay();
-	// 100 milliseconds
-	glutTimerFunc(100, Timer, 0);
-}
 
 void Idle()
 {
-	
+	game.Update();
 	glutPostRedisplay();
 }
 
@@ -117,10 +135,7 @@ void MouseButton(int button, int state, int x, int y)
 
 void MouseMotion(int x, int y)
 {
-	if (LPP == GLUT_DOWN)
-	{
-		
-	}
+	int j = x;
 	glutPostRedisplay();
 }
 
@@ -128,7 +143,7 @@ int main(int argc, char * argv[])
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(400, 400);
+	glutInitWindowSize(800, 600);
 	glutInitWindowPosition(5, 5);
 	glutCreateWindow("Kwadrat 1");
 
@@ -137,7 +152,7 @@ int main(int argc, char * argv[])
 	glutKeyboardFunc(Keyboard);
 	glutMouseFunc(MouseButton);
 	glutMotionFunc(MouseMotion);
-	//glutIdleFunc(Idle);
+	glutIdleFunc(Idle);
 
 	glutMainLoop();
     return 0;

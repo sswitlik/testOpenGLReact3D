@@ -8,9 +8,16 @@ public:
 	~BodyObj();
 	void Draw(float m[16]);
 	void setType(int type);
+	void setMaterial(float bounce);
+
+	//test 0.2
+	void testset();
+
+
 private:
 	rp3d::RigidBody *body;
 	rp3d::ProxyShape *proxyShape;
 	rp3d::BoxShape *shape;
+	//rp3d::Material& material;
 };
 
