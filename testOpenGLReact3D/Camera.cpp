@@ -8,7 +8,7 @@ Camera::Camera()
 {
 	x = 0;
 	y = 0;
-	z = 0;
+	z = 5.0;
 
 	lx = 0;
 	ly = 0;
@@ -27,6 +27,7 @@ Camera::~Camera()
 
 void Camera::move(Direction dir)
 {
+	float d = 0;
 	switch (dir)
 	{
 	case UP:
@@ -42,29 +43,33 @@ void Camera::move(Direction dir)
 		x -= 0.2;
 		break;
 	case FORWARD:
-		z -= 0.2;
+		d = 0.2;
 		break;
 	case BACK:
-		z += 0.2;
+		d = -0.2;
 		break;
 	}
+
+	z += lz*d;
+	x += lx*d;
 }
 
-void Camera::rotate(Direction dir)
+void Camera::rotate(Direction dir, int angle)
 {
+	angle = abs(angle);
 	switch (dir)
 	{
 	case UP:
-		angle_v = 0.05;
+		angle_v = 0.01 * angle;
 		break;
 	case DOWN:
-		angle_v = -0.05;
+		angle_v = -0.01 * angle;
 		break;
 	case RIGHT:
-		angle_h = 0.05;
+		angle_h = 0.01 * angle;
 		break;
 	case LEFT:
-		angle_h = -0.05;
+		angle_h = -0.01 * angle;
 		break;
 	case FORWARD:
 		break;

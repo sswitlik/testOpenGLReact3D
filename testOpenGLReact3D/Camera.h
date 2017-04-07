@@ -18,7 +18,7 @@ public:
 	~Camera();
 
 	void move(Direction dir);
-	void rotate(Direction dir);
+	void rotate(Direction dir, int angle);
 	void set();
 private:
 	rp3d::Quaternion orient;	//test 0.4

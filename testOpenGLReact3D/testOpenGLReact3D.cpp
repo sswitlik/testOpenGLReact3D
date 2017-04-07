@@ -9,8 +9,10 @@
 Game game;
 Camera cam;
 
-double eyex = 0, eyey = 0, eyez = 5;
-int rotator = 0; bool bckfor = true; int LPP = GLUT_UP;
+//MOUSE test 0.5
+float mx, my; int mi;
+//double eyex = 0, eyey = 0, eyez = 5;
+//int rotator = 0; bool bckfor = true; int LPP = GLUT_UP;
 
 void Display()
 {
@@ -53,7 +55,7 @@ void Display()
 			matrix[16];
 			game.objs[i].Draw(matrix);
 			glMultMatrixf(matrix);
-			glColor3f(1 - 0.02*i, 0, 0.02*i);
+			glColor3f(1 - 0.05*i, 0, 0.05*i);
 			glutSolidCube(1);
 			glColor3f(0, 0, 0);
 			glutWireCube(1);
@@ -84,7 +86,7 @@ void Reshape(int width, int height)
 		aspect = width / (GLdouble)height;
 
 	// rzutowanie perspektywiczne
-	gluPerspective(90, aspect, 0.5, 30.0);
+	gluPerspective(90, aspect, 0.1, 30.0);
 
 	Display();
 }
@@ -98,10 +100,10 @@ void Keyboard(unsigned char key, int x, int y)
 
 	case 'w':   cam.move(FORWARD);	break;
 	case 's':   cam.move(BACK);		break;
-	case 'd':   cam.rotate(RIGHT);	break;
-	case 'a':   cam.rotate(LEFT);	break;
-	case 'q':   cam.rotate(UP);	    break;
-	case 'e':   cam.rotate(DOWN);	break;
+	case 'd':   cam.rotate(RIGHT,1);	break;
+	case 'a':   cam.rotate(LEFT,1);	break;
+	case 'q':   cam.rotate(UP,1);	    break;
+	case 'e':   cam.rotate(DOWN,1);	break;
 	case 'z':	game.Update();		break;
 	case 'x':	game.plus();		break;
 	}
@@ -120,14 +122,6 @@ void Idle()
 
 void MouseButton(int button, int state, int x, int y)
 {
-	if (button == GLUT_LEFT_BUTTON)
-	{
-		if (LPP == GLUT_UP)
-			LPP = GLUT_DOWN;
-		else
-			LPP = GLUT_UP;
-	}
-
 	Display();
 }
 
@@ -135,8 +129,37 @@ void MouseButton(int button, int state, int x, int y)
 
 void MouseMotion(int x, int y)
 {
-	int j = x;
+	
 	glutPostRedisplay();
+}
+
+void MousePassiveMotion(int x, int y)
+{
+	if (x > 600 || x < 200 || y > 450 || y < 150)
+	{
+		SetCursorPos(400, 300);
+		mx = 400;
+		my = 300;
+		return;
+	}
+
+	if (mx - x < 0)
+		cam.rotate(RIGHT, mx - x);
+	if (mx - x > 0)
+		cam.rotate(LEFT, mx -x);
+	if (my - y > 0)
+		cam.rotate(UP, my -y);
+	if (my - y < 0)
+		cam.rotate(DOWN, my -y);
+	mx = x; my = y;
+
+
+	Display();
+}
+
+void EntryFunc(int state)
+{
+	;
 }
 
 int main(int argc, char * argv[])
@@ -152,6 +175,9 @@ int main(int argc, char * argv[])
 	glutKeyboardFunc(Keyboard);
 	glutMouseFunc(MouseButton);
 	glutMotionFunc(MouseMotion);
+	glutEntryFunc(EntryFunc);
+
+	glutPassiveMotionFunc(MousePassiveMotion);
 	glutIdleFunc(Idle);
 
 	glutMainLoop();
