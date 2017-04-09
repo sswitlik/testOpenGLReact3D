@@ -25,11 +25,11 @@ void Game::ExampleTestInit()
 	//WORLD
 	rp3d::Vector3 gravity(0.0, -9.81, 0.0);
 	World = new rp3d::DynamicsWorld(gravity);
-	
+
 	World->setNbIterationsVelocitySolver(15);
 	World->setNbIterationsPositionSolver(8);
 
-	
+
 	//TEMPORARY DATA FOR INITIALIZATION
 	rp3d::Vector3 initPosition;
 	rp3d::Quaternion initOrientation;
@@ -42,7 +42,7 @@ void Game::ExampleTestInit()
 	floor = new BodyObj(this->World, initPosition, initOrientation, shapeData);
 	floor->setType(1);
 	floor->setMaterial(0);
-	
+
 	//OBJ
 	initPosition.setAllValues(0.0, 2.0, 0.0);
 	initOrientation = rp3d::Quaternion::identity();
@@ -93,10 +93,10 @@ void Game::Update()
 		accumulator -= timeStep2;
 	}
 	int t2 = glutGet(GLUT_ELAPSED_TIME);
-	int j=0;
-	
+	int j = 0;
+
 	/*for (int i=0;i<1;i++)
-		World->update(0.016);*/
+	World->update(0.016);*/
 }
 
 void Game::plus()
@@ -115,4 +115,3 @@ void Game::plus()
 
 	objs.push_back(obj);
 }
-

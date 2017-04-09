@@ -33,4 +33,3 @@ private:
 	float angle_v;
 	float angle_h;
 };
-

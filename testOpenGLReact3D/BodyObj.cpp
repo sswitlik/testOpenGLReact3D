@@ -76,4 +76,3 @@ void BodyObj::testset()	//test 0.2
 
 	body->setAngularDamping(0.99);
 }
-

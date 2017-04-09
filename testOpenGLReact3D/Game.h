@@ -18,11 +18,11 @@ public:
 	std::vector <BodyObj> objs;
 private:
 	rp3d::DynamicsWorld *World;
-	
+
 	BodyObj *floor;
 	BodyObj *obj1;
 	void ExampleTestInit();
-////TIME
+	////TIME
 	unsigned int previousFrameTime;
 	unsigned int accumulator;
 };

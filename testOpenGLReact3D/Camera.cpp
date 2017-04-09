@@ -94,5 +94,5 @@ void Camera::rotate(Direction dir, int angle)
 
 void Camera::set()
 {
-	gluLookAt(x, y, z, x+lx, y+ly, z+lz, 0, 1, 0);
+	gluLookAt(x, y, z, x + lx, y + ly, z + lz, 0, 1, 0);
 }

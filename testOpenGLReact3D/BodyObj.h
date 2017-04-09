@@ -20,4 +20,3 @@ private:
 	rp3d::BoxShape *shape;
 	//rp3d::Material& material;
 };
-
