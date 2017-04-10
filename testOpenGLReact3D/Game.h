@@ -2,6 +2,7 @@
 #include "reactphysics3d.h"
 #include <vector>
 #include "BodyObj.h"
+#include "Player.h"
 
 class Game
 {
@@ -16,7 +17,11 @@ public:
 	//nowe szesciany
 	int quantity;
 	std::vector <BodyObj> objs;
-private:
+	//PLAYER
+	//Player *player;
+	//test 0.2
+	void rd();
+//private:
 	rp3d::DynamicsWorld *World;
 
 	BodyObj *floor;
@@ -25,4 +30,5 @@ private:
 	////TIME
 	unsigned int previousFrameTime;
 	unsigned int accumulator;
+	
 };

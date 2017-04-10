@@ -8,12 +8,12 @@ public:
 	~BodyObj();
 	void Draw(float m[16]);
 	void setType(int type);
-	void setMaterial(float bounce);
+	void setMaterial(float , float);
 
 	//test 0.2
 	void testset();
-
-
+	void rd();
+	float angle;
 private:
 	rp3d::RigidBody *body;
 	rp3d::ProxyShape *proxyShape;

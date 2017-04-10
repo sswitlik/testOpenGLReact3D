@@ -5,15 +5,16 @@
 #include <GL\freeglut.h>
 #include "Game.h"
 #include "Camera.h"
+#include "Player.h"
 
 Game game;
 Camera cam;
+Player *player;
 
 //MOUSE
 int mx, my;
 //Keyboard
 bool keystate[256];
-
 
 void Display()
 {
@@ -50,13 +51,23 @@ void Display()
 		glutWireCube(1);
 	glPopMatrix();
 
+	glPushMatrix();
+		player->Draw(matrix);
+		glMultMatrixf(matrix);
+		//glScalef(20, 1, 20);
+		glColor3f(0, 0, 0.5);
+		glutSolidCube(1);
+		glColor3f(0, 0, 0);
+		glutWireCube(1);
+	glPopMatrix();
+
 	for (int i = 0; i < game.quantity; i++)
 	{
 		glPushMatrix();
 			matrix[16];
 			game.objs[i].Draw(matrix);
 			glMultMatrixf(matrix);
-			glColor3f(1 - 0.05*i, 0.5, 0.05*i);
+			glColor3f(0.05*i, 0.05*i, 0.05*i);
 			glutSolidCube(1);
 			glColor3f(0, 0, 0);
 			glutWireCube(1);
@@ -92,7 +103,7 @@ void Reshape(int width, int height)
 	Display();
 }
 
-void OnTimer(int id) 
+void OnTimer(int id)
 {
 	glutTimerFunc(17, OnTimer, 0);
 
@@ -105,7 +116,18 @@ void OnTimer(int id)
 	if (keystate['a'])
 		cam.move(LEFT);
 
-
+	if (keystate['u'])
+		player->rotate2(LEFT, 0.04);
+	if (keystate['o'])
+		player->rotate2(RIGHT, 0.04);
+	if (keystate['i'])
+		player->move2(FORWARD);
+	if (keystate['k'])
+		player->move2(BACK);
+	if (keystate['j'])
+		player->move2(LEFT);
+	if (keystate['l'])
+		player->move2(RIGHT);
 }
 
 void OnKeyDown(unsigned char key, int x, int y)
@@ -140,14 +162,14 @@ void KeyboardFunc(unsigned char key, int x, int y)
 	case 27:
 		exit(0);
 
-	case 'w':   cam.move(FORWARD);	break;
-	case 's':   cam.move(BACK);		break;
-	case 'd':   cam.move(RIGHT);	break;
-	case 'a':   cam.move(LEFT);	break;
-	case 'q':   cam.rotate(UP,1);	    break;
-	case 'e':   cam.rotate(DOWN,1);	break;
-	case 'z':	game.Update();		break;
-	case 'x':	game.plus();		break;
+	//case 'w':   cam.move(FORWARD);	break;
+	//case 's':   cam.move(BACK);		break;
+	//case 'd':   cam.move(RIGHT);	break;
+	//case 'a':   cam.move(LEFT);	break;
+	//case 'q':   cam.rotate(UP,1);	    break;
+	//case 'e':   cam.rotate(DOWN,1);	break;
+	//case 'z':	game.Update();		break;
+	//case 'x':	game.plus();		break;
 	}
 
 
@@ -158,7 +180,9 @@ void KeyboardFunc(unsigned char key, int x, int y)
 
 void Idle()
 {
+	//player->move2(FORWARD);
 	game.Update();
+	player->unrotate();
 	glutPostRedisplay();
 }
 
@@ -204,6 +228,13 @@ void EntryFunc(int state)
 
 int main(int argc, char * argv[])
 {
+	//PLAYER
+	rp3d::Vector3 initPosition(1.0, 2.0, 0.0);
+	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
+	rp3d::Vector3 shapeData(0.5, 0.5, 0.5);
+
+	player = new Player(game.World, initPosition, initOrientation, shapeData);
+
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(800, 600);

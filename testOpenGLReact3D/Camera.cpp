@@ -7,7 +7,7 @@
 Camera::Camera()
 {
 	x = 0;
-	y = 0;
+	y = 2.0;
 	z = 5.0;
 
 	lx = 0;
@@ -17,7 +17,7 @@ Camera::Camera()
 	angle_h = 0;
 	angle_v = 0;
 
-	orient.setAllValues(lx, ly, lz, 1);
+	//orient.setAllValues(lx, ly, lz, 1);
 }
 
 
@@ -27,31 +27,42 @@ Camera::~Camera()
 
 void Camera::move(Direction dir)
 {
-	float d = 0;
+	float dz = 0;
+	float dx = 0;
+
+	float speed = 0.1;
 	switch (dir)
 	{
 	case UP:
-		y += 0.2;
+		y += speed;
 		break;
 	case DOWN:
-		y -= 0.2;
+		y -= speed;
 		break;
 	case RIGHT:
-		x += 0.2;
+		dx = speed;
 		break;
 	case LEFT:
-		x -= 0.2;
+		dx = -speed;
 		break;
 	case FORWARD:
-		d = 0.2;
+		dz = speed;
 		break;
 	case BACK:
-		d = -0.2;
+		dz = -speed;
 		break;
 	}
 
-	z += lz*d;
-	x += lx*d;
+	float proportion = 1/sqrt(pow(lx, 2) + pow(lz, 2));
+
+	//przod i tyl
+	z += lz*dz*proportion;
+	x += lx*dz*proportion;
+	
+	//lewo i prawo
+	float beta = atan2(lz, lx);
+	z += cos(-beta) * dx;
+	x += sin(-beta) * dx;
 }
 
 void Camera::rotate(Direction dir, int angle)
@@ -60,10 +71,16 @@ void Camera::rotate(Direction dir, int angle)
 	switch (dir)
 	{
 	case UP:
-		angle_v = 0.01 * angle;
+		if (ly < 0.999)
+			angle_v = 0.01 * angle;
+		else
+			angle_v = 0;
 		break;
 	case DOWN:
-		angle_v = -0.01 * angle;
+		if (ly > -0.999)
+			angle_v = -0.01 * angle;
+		else
+			angle_v = 0;
 		break;
 	case RIGHT:
 		angle_h = 0.01 * angle;
@@ -94,5 +111,16 @@ void Camera::rotate(Direction dir, int angle)
 
 void Camera::set()
 {
-	gluLookAt(x, y, z, x + lx, y + ly, z + lz, 0, 1, 0);
+	gluLookAt(x, y, z, x+lx, y+ly, z+lz, 0, 1, 0);
+}
+
+void Camera::sync(rp3d::Vector3 pos, rp3d::Quaternion orient)
+{
+	x = pos.x;
+	y = pos.y;
+	z = pos.z;
+
+	//lx = orient.x;
+	//ly = orient.y;
+	//lz = orient.z;
 }
