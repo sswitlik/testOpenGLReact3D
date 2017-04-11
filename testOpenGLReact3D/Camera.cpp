@@ -7,7 +7,7 @@
 Camera::Camera()
 {
 	x = 0;
-	y = 2.0;
+	y = 3.0;
 	z = 5.0;
 
 	lx = 0;
@@ -114,13 +114,16 @@ void Camera::set()
 	gluLookAt(x, y, z, x+lx, y+ly, z+lz, 0, 1, 0);
 }
 
-void Camera::sync(rp3d::Vector3 pos, rp3d::Quaternion orient)
+void Camera::sync(rp3d::Vector3 pos, float yaw, float roll, float pitch)
 {
 	x = pos.x;
 	y = pos.y;
 	z = pos.z;
 
-	//lx = orient.x;
-	//ly = orient.y;
-	//lz = orient.z;
+	//rp3d::Quaternion q(pitch, yaw, roll);
+	//rp3d::Vector3 v = q.getVectorV();
+	
+	lx = sin(yaw);
+	ly = 0;
+	lz = cos(yaw);
 }

@@ -21,7 +21,7 @@ public:
 	void rotate(Direction dir, int angle);
 	void set();
 
-	void sync(rp3d::Vector3 pos, rp3d::Quaternion orient);
+	void sync(rp3d::Vector3 pos, float yaw, float roll, float pitch);
 private:
 	//rp3d::Quaternion orient;	//test 0.4
 	float x;	//position

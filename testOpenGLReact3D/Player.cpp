@@ -3,18 +3,14 @@
 #include <GL\freeglut.h>
 
 #define RAD  0.01745329
-#define PI_2 9.86960440108935
-
+#define PI_2 1.57079632679
+#define PIx2 6.28318530717
 
 Player::Player(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData)
 {
-	//rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
-	//initOrientation = rp3d::Quaternion::identity();
 	rp3d::Transform transform(initPosition, initOrientation);
 	body = world->createRigidBody(transform);
-
-	//const rp3d::Vector3 shapeData(x, y, z);
-	shape = new rp3d::BoxShape(shapeData, 0.1);
+	shape = new rp3d::BoxShape(shapeData, 0.4);
 
 	rp3d::Transform transform2 = rp3d::Transform::identity();
 	rp3d::decimal mass = rp3d::decimal(4.0);
@@ -26,13 +22,22 @@ Player::Player(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Qua
 	material.setBounciness(rp3d::decimal(0));
 	material.setFrictionCoefficient(rp3d::decimal(1));
 
-	cam.sync(initPosition, initOrientation);
-	rot_angle = 0;
+	Yaw = 0; Roll = 0; Pitch = 0;
+	cam.sync(initPosition, Yaw, Roll, Pitch);
 }
 
 
 Player::~Player()
 {
+}
+
+void Player::update()
+{
+	rp3d::Transform trans = body->getTransform();
+	
+	cam.sync(trans.getPosition(), Yaw, Roll, Pitch);
+	//cam.set();
+	unrotate();
 }
 
 void QuaternionO2IToEulerAngles(float *Yaw, float *Pitch, float *Roll, const rp3d::Quaternion &q)
@@ -61,34 +66,38 @@ void Player::unrotate()
 	rp3d::Transform trans = body->getTransform();
 	rp3d::Quaternion orient = trans.getOrientation();
 
-	float Yaw, Pitch, Roll;
-
 	QuaternionO2IToEulerAngles(&Yaw, &Pitch, &Roll, orient);
 	
-	if (Pitch > 0.1 || Roll > 0.1)
+	if (Pitch > 0.1 || Roll > 0.1 || Pitch < -0.1 || Roll < -0.1)
 	{
-		rp3d::Quaternion o(Yaw, 0, 0);
+		rp3d::Quaternion o(0, Yaw, 0);
 		trans.setOrientation(o);
 		body->setTransform(trans);
 	}
+}
+
+void Player::stop()
+{
+	rp3d::Vector3 vel = body->getLinearVelocity();
+	rp3d::Vector3 speed(0, vel.y, 0);
+	body->setLinearVelocity(speed);
 }
 
 void Player::move(Direction dir)
 {
 	rp3d::Transform trans = body->getTransform();
 	rp3d::Quaternion orient = trans.getOrientation();
-	rp3d::Vector3 pos = trans.getPosition();
+	//float Yaw, Pitch, Roll;
+	QuaternionO2IToEulerAngles(&Yaw, &Pitch, &Roll, orient);
 
-	float lx = orient.x;
-	float lz = orient.z;
+	rp3d::Vector3 vel = body->getLinearVelocity();
+
 	float x = 0;
 	float y = 0;
 	float z = 0;
 
-	float dz = 0;
-	float dx = 0;
+	float speed = 2.5;
 
-	float speed = 0.1;
 	switch (dir)
 	{
 	case UP:
@@ -98,33 +107,36 @@ void Player::move(Direction dir)
 		//y -= speed;
 		break;
 	case RIGHT:
-		dx = speed;
+		x = -sin(Yaw + PI_2)*speed;
+		z = -cos(Yaw + PI_2)*speed;
 		break;
 	case LEFT:
-		dx = -speed;
+		x = sin(Yaw + PI_2)*speed;
+		z = cos(Yaw + PI_2)*speed;
 		break;
 	case FORWARD:
-		dz = speed;
+		x = sin(Yaw)*speed;
+		z = cos(Yaw)*speed;
 		break;
 	case BACK:
-		dz = -speed;
+		x = -sin(Yaw)*speed;
+		z = -cos(Yaw)*speed;
 		break;
 	}
 
-	float proportion = 1 / sqrt(pow(lx, 2) + pow(lz, 2));
+	float new_x = x + vel.x;
+	float new_z = z + vel.z;
+	float new_y = y + vel.y;
 
-	//przod i tyl
-	z += lz*dz*proportion;
-	x += lx*dz*proportion;
-
-	//lewo i prawo
-	float beta = atan2(lz, lx);
-	z += cos(-beta) * dx;
-	x += sin(-beta) * dx;
-
-	pos.setAllValues(x, y, z);
-	//trans.setPosition(pos);
-	//body->applyForceToCenterOfMass(pos);
+	rp3d::Vector2 max_speed(new_x, new_z);
+	if (max_speed.length() > 5)
+	{
+		max_speed.normalize();
+		max_speed *= 5;
+	
+	}
+	rp3d::Vector3 new_vel(max_speed.x, new_y, max_speed.y);
+	body->setLinearVelocity(new_vel);
 }
 
 void Player::move2(Direction dir)
@@ -181,7 +193,7 @@ void Player::rotate2(Direction dir, float angle)
 
 	QuaternionO2IToEulerAngles(&Yaw, &Pitch, &Roll, orient);
 			
-	rot_angle = Yaw;
+	//rot_angle = Yaw;
 	switch (dir)
 	{
 	case UP:
@@ -189,10 +201,10 @@ void Player::rotate2(Direction dir, float angle)
 	case DOWN:
 		break;
 	case RIGHT:
-		rot_angle += angle;
+		Yaw -= angle;
 		break;
 	case LEFT:
-		rot_angle -= angle;
+		Yaw += angle;
 		break;
 	case FORWARD:
 		break;
@@ -204,10 +216,10 @@ void Player::rotate2(Direction dir, float angle)
 
 	rp3d::Matrix3x3 m = orient.getMatrix();
 
-	m[0][0] = cos(rot_angle);
-	m[0][2] = sin(rot_angle);
-	m[2][0] = -sin(rot_angle);
-	m[2][2] = cos(rot_angle);
+	m[0][0] = cos(Yaw);
+	m[0][2] = sin(Yaw);
+	m[2][0] = -sin(Yaw);
+	m[2][2] = cos(Yaw);
 
 	rp3d::Quaternion neworient(m);
 

@@ -18,8 +18,13 @@ public:
 	Camera cam;
 
 	void unrotate();
+	void stop();
+	void update();
 //private:
-	float rot_angle;	//y rotation
+	float Yaw;		//y rotation
+	float Pitch;	// rotation
+	float Roll;		// rotation
+
 	rp3d::Vector3 Position;
 	//rp3d::Vector3 Orientation;
 	

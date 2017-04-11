@@ -117,7 +117,7 @@ void Game::plus()
 	initOrientation = rp3d::Quaternion::identity();
 	shapeData.setAllValues(0.5, 0.5, 0.5);
 	BodyObj obj(this->World, initPosition, initOrientation, shapeData);
-	obj.setMaterial(0.3,0.2);
+	obj.setMaterial(0.8,0.2);
 
 	objs.push_back(obj);
 }

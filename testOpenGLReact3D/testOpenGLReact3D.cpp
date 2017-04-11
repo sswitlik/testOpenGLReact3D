@@ -24,11 +24,12 @@ void Display()
 	glLoadIdentity();
 	glEnable(GL_DEPTH_TEST);
 	//gluLookAt(eyex, eyey, eyez, 0, 0, 0, 0, 1, 0);
-	cam.set();
+	//cam.set();
+	player->cam.set();
 	float matrix[16];
 	
 	
-
+	//FLOOR
 	glPushMatrix();
 		matrix[16];
 		game.Draw_floor(matrix);
@@ -40,6 +41,7 @@ void Display()
 		glutWireCube(1);
 	glPopMatrix();
 
+	//OBJ
 	glPushMatrix();
 		matrix[16];
 		game.Draw_1(matrix);
@@ -51,13 +53,14 @@ void Display()
 		glutWireCube(1);
 	glPopMatrix();
 
+	////PLAYER
 	glPushMatrix();
 		player->Draw(matrix);
 		glMultMatrixf(matrix);
 		//glScalef(20, 1, 20);
 		glColor3f(0, 0, 0.5);
-		glutSolidCube(1);
-		glColor3f(0, 0, 0);
+		//glutSolidCube(1);
+		glColor3f(1, 1, 1);
 		glutWireCube(1);
 	glPopMatrix();
 
@@ -67,7 +70,7 @@ void Display()
 			matrix[16];
 			game.objs[i].Draw(matrix);
 			glMultMatrixf(matrix);
-			glColor3f(0.05*i, 0.05*i, 0.05*i);
+			glColor3f(0, 0.05*i, 0.05*i);
 			glutSolidCube(1);
 			glColor3f(0, 0, 0);
 			glutWireCube(1);
@@ -121,13 +124,13 @@ void OnTimer(int id)
 	if (keystate['o'])
 		player->rotate2(RIGHT, 0.04);
 	if (keystate['i'])
-		player->move2(FORWARD);
+		player->move(FORWARD);
 	if (keystate['k'])
-		player->move2(BACK);
+		player->move(BACK);
 	if (keystate['j'])
-		player->move2(LEFT);
+		player->move(LEFT);
 	if (keystate['l'])
-		player->move2(RIGHT);
+		player->move(RIGHT);
 }
 
 void OnKeyDown(unsigned char key, int x, int y)
@@ -152,6 +155,14 @@ void OnKeyPress(unsigned char key, int x, int y) {
 // Obsługa zdarzenia puszczenia klawisza.
 void OnKeyUp(unsigned char key, int x, int y) 
 {
+	if (key == 'i')
+		player->stop();
+	if (key == 'j')
+		player->stop();
+	if (key == 'k')
+		player->stop();
+	if (key == 'l')
+		player->stop();
 	keystate[key] = false;
 }
 
@@ -180,9 +191,8 @@ void KeyboardFunc(unsigned char key, int x, int y)
 
 void Idle()
 {
-	//player->move2(FORWARD);
 	game.Update();
-	player->unrotate();
+	player->update();
 	glutPostRedisplay();
 }
 
@@ -229,7 +239,7 @@ void EntryFunc(int state)
 int main(int argc, char * argv[])
 {
 	//PLAYER
-	rp3d::Vector3 initPosition(1.0, 2.0, 0.0);
+	rp3d::Vector3 initPosition(1.0, 10.0, 2.0);
 	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
 	rp3d::Vector3 shapeData(0.5, 0.5, 0.5);
 
