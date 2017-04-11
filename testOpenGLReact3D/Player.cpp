@@ -78,6 +78,9 @@ void Player::unrotate()
 
 void Player::stop()
 {
+	rp3d::Material& material = body->getMaterial();
+	material.setFrictionCoefficient(rp3d::decimal(1));
+
 	rp3d::Vector3 vel = body->getLinearVelocity();
 	rp3d::Vector3 speed(0, vel.y, 0);
 	body->setLinearVelocity(speed);
@@ -85,6 +88,10 @@ void Player::stop()
 
 void Player::move(Direction dir)
 {
+	rp3d::Material& material = body->getMaterial();
+	material.setFrictionCoefficient(rp3d::decimal(0));
+
+
 	rp3d::Transform trans = body->getTransform();
 	rp3d::Quaternion orient = trans.getOrientation();
 	//float Yaw, Pitch, Roll;
@@ -189,11 +196,6 @@ void Player::rotate2(Direction dir, float angle)
 	rp3d::Transform trans = body->getTransform();
 	rp3d::Quaternion orient = trans.getOrientation();
 
-	float Yaw, Pitch, Roll;
-
-	QuaternionO2IToEulerAngles(&Yaw, &Pitch, &Roll, orient);
-			
-	//rot_angle = Yaw;
 	switch (dir)
 	{
 	case UP:
@@ -212,27 +214,16 @@ void Player::rotate2(Direction dir, float angle)
 		break;
 	}
 
-	
-
 	rp3d::Matrix3x3 m = orient.getMatrix();
-
 	m[0][0] = cos(Yaw);
 	m[0][2] = sin(Yaw);
 	m[2][0] = -sin(Yaw);
 	m[2][2] = cos(Yaw);
 
 	rp3d::Quaternion neworient(m);
-
 	trans.setOrientation(neworient);
-
 	body->setTransform(trans);
-
 }
-
-//void Player::set()
-//{
-//	gluLookAt(x, y, z, x + lx, y + ly, z + lz, 0, 1, 0);
-//}
 
 void Player::Draw(float m[16])
 {
@@ -242,4 +233,14 @@ void Player::Draw(float m[16])
 
 	for (int i = 0; i < 16; i++)
 		m[i] = matrix[i];
+}
+
+void Player::look_vertical(float angle)
+{
+	if (angle > 0)
+		cam.ly += 0.5;
+	//cam.rotate(UP, angle);
+	else
+		cam.ly -= 0.5;
+		//cam.rotate(DOWN, angle);
 }

@@ -65,7 +65,7 @@ void Camera::move(Direction dir)
 	x += sin(-beta) * dx;
 }
 
-void Camera::rotate(Direction dir, int angle)
+void Camera::rotate(Direction dir, float angle)
 {
 	angle = abs(angle);
 	switch (dir)
@@ -119,11 +119,20 @@ void Camera::sync(rp3d::Vector3 pos, float yaw, float roll, float pitch)
 	x = pos.x;
 	y = pos.y;
 	z = pos.z;
-
-	//rp3d::Quaternion q(pitch, yaw, roll);
-	//rp3d::Vector3 v = q.getVectorV();
 	
-	lx = sin(yaw);
-	ly = 0;
-	lz = cos(yaw);
+	float tx = sin(yaw),
+	//ty = ly,
+	tz = cos(yaw);
+	
+	float dlxz = sqrt(pow(tx, 2) + pow(tz, 2));
+	float dly = sqrt(1 - pow(ly, 2));
+
+	float prop = dly / dlxz;
+
+	tx *= prop;
+	tz *= prop;
+
+	lx = tx;
+	//ly = ty;
+	lz = tz;
 }

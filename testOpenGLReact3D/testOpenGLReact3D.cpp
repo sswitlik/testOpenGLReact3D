@@ -23,9 +23,9 @@ void Display()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glEnable(GL_DEPTH_TEST);
-	//gluLookAt(eyex, eyey, eyez, 0, 0, 0, 0, 1, 0);
 	//cam.set();
 	player->cam.set();
+	printf("%f\n", player->cam.ly);
 	float matrix[16];
 	
 	
@@ -120,9 +120,11 @@ void OnTimer(int id)
 		cam.move(LEFT);
 
 	if (keystate['u'])
-		player->rotate2(LEFT, 0.04);
+		player->cam.rotate(UP, 2.5);
+		//player->rotate2(LEFT, 0.04);
 	if (keystate['o'])
-		player->rotate2(RIGHT, 0.04);
+		player->cam.rotate(DOWN, 2.5);
+		//player->rotate2(RIGHT, 0.04);
 	if (keystate['i'])
 		player->move(FORWARD);
 	if (keystate['k'])
@@ -212,14 +214,17 @@ void MousePassiveMotion(int x, int y)
 		return;
 	}
 
+	printf("%d\n", mx - x);
 	if (mx - x < 0)
-		cam.rotate(RIGHT, mx - x);
+		player->rotate2(RIGHT, (float)(mx - x)/-100);
 	if (mx - x > 0)
-		cam.rotate(LEFT, mx -x);
+		player->rotate2(LEFT, (float)(mx - x) / 100);
 	if (my - y > 0)
-		cam.rotate(UP, my -y);
+		player->cam.rotate(UP, my - y);
+		//player->rotate2(UP, (float)(mx - x) / 100);
 	if (my - y < 0)
-		cam.rotate(DOWN, my -y);
+		player->cam.rotate(DOWN, my - y);
+	//player->rotate2(DOWN, (float)(mx - x) / 100);
 	mx = x; my = y;
 
 	//Display();

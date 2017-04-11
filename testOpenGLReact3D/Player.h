@@ -13,6 +13,7 @@ public:
 	void move(Direction dir);
 	void move2(Direction dir);
 	void rotate2(Direction dir, float angle);
+	void look_vertical(float angle);
 	void Draw(float m[16]);
 	//void set();
 	Camera cam;
