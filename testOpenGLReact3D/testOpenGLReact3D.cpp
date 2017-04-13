@@ -125,16 +125,21 @@ void OnTimer(int id)
 		player->cam.rotate(DOWN, 2.5);
 		//player->rotate2(RIGHT, 0.04);
 	if (keystate['i'])
-		player->move(FORWARD);
+		player->set_control(0);
+		//player->move(FORWARD);
 	if (keystate['k'])
-		player->move(BACK);
+		player->set_control(1);
+		//player->move(BACK);
 	if (keystate['j'])
-		player->move(LEFT);
+		player->set_control(2);
+		//player->move(LEFT);
 	if (keystate['l'])
-		player->move(RIGHT);
+		player->set_control(3);
+		//player->move(RIGHT);
 
 	if (keystate[' '])
-		player->jump();
+		player->set_control(4);
+		//player->jump();
 }
 
 void OnKeyDown(unsigned char key, int x, int y)
@@ -160,13 +165,21 @@ void OnKeyPress(unsigned char key, int x, int y) {
 void OnKeyUp(unsigned char key, int x, int y) 
 {
 	if (key == 'i')
-		player->stop();
-	if (key == 'j')
-		player->stop();
+		player->unset_control(0);
+		//player->stop();
 	if (key == 'k')
-		player->stop();
+		player->unset_control(1);
+		//player->stop();
+	if (key == 'j')
+		player->unset_control(2);
+		//player->stop();
 	if (key == 'l')
-		player->stop();
+		player->unset_control(3);
+		//player->stop();
+	if (key == ' ')
+		player->unset_control(4);
+		//player->stop();
+
 	keystate[key] = false;
 }
 
