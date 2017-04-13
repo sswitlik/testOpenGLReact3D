@@ -25,7 +25,6 @@ void Display()
 	glEnable(GL_DEPTH_TEST);
 	//cam.set();
 	player->cam.set();
-	printf("%f\n", player->cam.ly);
 	float matrix[16];
 	
 	
@@ -57,7 +56,7 @@ void Display()
 	glPushMatrix();
 		player->Draw(matrix);
 		glMultMatrixf(matrix);
-		//glScalef(20, 1, 20);
+		glScalef(0.5, 1, 0.5);
 		glColor3f(0, 0, 0.5);
 		//glutSolidCube(1);
 		glColor3f(1, 1, 1);
@@ -133,6 +132,9 @@ void OnTimer(int id)
 		player->move(LEFT);
 	if (keystate['l'])
 		player->move(RIGHT);
+
+	if (keystate[' '])
+		player->jump();
 }
 
 void OnKeyDown(unsigned char key, int x, int y)
@@ -214,7 +216,6 @@ void MousePassiveMotion(int x, int y)
 		return;
 	}
 
-	printf("%d\n", mx - x);
 	if (mx - x < 0)
 		player->rotate2(RIGHT, (float)(mx - x)/-100);
 	if (mx - x > 0)
@@ -244,9 +245,9 @@ void EntryFunc(int state)
 int main(int argc, char * argv[])
 {
 	//PLAYER
-	rp3d::Vector3 initPosition(1.0, 10.0, 2.0);
+	rp3d::Vector3 initPosition(1.0, 2.0, 2.0);
 	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
-	rp3d::Vector3 shapeData(0.5, 0.5, 0.5);
+	rp3d::Vector3 shapeData(0.25, 0.5, 0.25);
 
 	player = new Player(game.World, initPosition, initOrientation, shapeData);
 

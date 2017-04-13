@@ -10,7 +10,7 @@ Player::Player(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Qua
 {
 	rp3d::Transform transform(initPosition, initOrientation);
 	body = world->createRigidBody(transform);
-	shape = new rp3d::BoxShape(shapeData, 0.4);
+	shape = new rp3d::BoxShape(shapeData, 0.1);
 
 	rp3d::Transform transform2 = rp3d::Transform::identity();
 	rp3d::decimal mass = rp3d::decimal(4.0);
@@ -98,6 +98,9 @@ void Player::move(Direction dir)
 	QuaternionO2IToEulerAngles(&Yaw, &Pitch, &Roll, orient);
 
 	rp3d::Vector3 vel = body->getLinearVelocity();
+
+	if (vel.y > 0.1 || vel.y < -0.1)		//can't move if fall
+		return;
 
 	float x = 0;
 	float y = 0;
@@ -243,4 +246,15 @@ void Player::look_vertical(float angle)
 	else
 		cam.ly -= 0.5;
 		//cam.rotate(DOWN, angle);
+}
+
+void Player::jump()
+{
+	rp3d::Vector3 vel = body->getLinearVelocity();
+
+	if (vel.y > 0.01 || vel.y < -0.01)		//can't move if fall
+		return;
+
+	rp3d::Vector3 force(0, 1000, 0);
+	body->applyForceToCenterOfMass(force);
 }
