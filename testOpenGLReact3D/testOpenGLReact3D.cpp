@@ -153,7 +153,7 @@ void OnKeyDown(unsigned char key, int x, int y)
 }
 
 void OnKeyPress(unsigned char key, int x, int y) {
-	printf("KeyPress: %c\n", key);
+	//printf("KeyPress: %c\n", key);
 	if (!keystate[key]) {
 		OnKeyDown(key, x, y); // Emulacja zdarzenia związanego z pojedynczym wciśnięciem klawisza
 	}

@@ -39,7 +39,7 @@ private:
 	bool a;
 	bool d;
 	bool jump;
-	float previous_velocity_y;
+	float jump_border;
 	//PHYSICS
 	rp3d::RigidBody *body;
 	rp3d::ProxyShape *proxyShape;

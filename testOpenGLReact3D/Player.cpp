@@ -35,7 +35,7 @@ Player::Player(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Qua
 	a = false;
 	d = false;
 	jump = false;
-	previous_velocity_y = 0;
+	jump_border = 0.1;
 }
 
 
@@ -289,28 +289,31 @@ void Player::serve_controls()
 {
 	//friction = 0
 	rp3d::Material& material = body->getMaterial();
-	//material.setFrictionCoefficient(rp3d::decimal(0));
+	material.setFrictionCoefficient(rp3d::decimal(0));
 
 	//get velocity
 	rp3d::Vector3 vel = body->getLinearVelocity();
 
-	if (abs(vel.y - previous_velocity_y) > 0.1)
-		return;
-
-	if (jump)
-	{
-		rp3d::Vector3 force(0, 100, 0);
-		body->applyForceToCenterOfMass(force);
+	if (vel.y < -0.1)
+		jump_border = 0.1;
+ 	
+	if (jump && abs(vel.y) < jump_border)
+	{	
+		jump_border = 0.01;
+		vel.y += 5;
+		rp3d::Vector3 force(vel.x, vel.y, vel.z);
+		body->setLinearVelocity(force);
 	}
-	else
-	{
+	
+	
 		rp3d::Transform trans = body->getTransform();
 		rp3d::Quaternion orient = trans.getOrientation();
 
 		float x = 0;
 		float y = 0;
 		float z = 0;
-		float speed = 2.5;
+
+		float speed = 5;
 
 		if (w ^ s)	//XOR
 		{
@@ -330,18 +333,18 @@ void Player::serve_controls()
 		{
 			if (a)
 			{
-				x = sin(Yaw + PI_2)*speed;
-				z = cos(Yaw + PI_2)*speed;
+				x += sin(Yaw + PI_2)*speed;
+				z += cos(Yaw + PI_2)*speed;
 			}
 			if (d)
 			{
-				x = -sin(Yaw + PI_2)*speed;
-				z = -cos(Yaw + PI_2)*speed;
+				x += -sin(Yaw + PI_2)*speed;
+				z += -cos(Yaw + PI_2)*speed;
 			}
 		}
 
-		float new_x = x + vel.x;
-		float new_z = z + vel.z;
+		float new_x = x ;
+		float new_z = z ;
 		float new_y = y + vel.y;
 
 		rp3d::Vector2 max_speed(new_x, new_z);
@@ -353,7 +356,8 @@ void Player::serve_controls()
 		}
 		rp3d::Vector3 new_vel(max_speed.x, new_y, max_speed.y);
 		body->setLinearVelocity(new_vel);
-	}
+	
+	//prev = vel.y;
 }
 
 void Player::Draw(float m[16])
