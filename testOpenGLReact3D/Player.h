@@ -19,6 +19,7 @@ public:
 	void move2(Direction dir);
 	void rotate2(Direction dir, float angle);
 	void look_vertical(float angle);
+	void test_shoot(rp3d::DynamicsWorld *world);
 	void Draw(float m[16]);
 	
 	//void set();

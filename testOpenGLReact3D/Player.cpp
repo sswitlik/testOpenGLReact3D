@@ -297,10 +297,12 @@ void Player::serve_controls()
 	if (vel.y < -0.1)
 		jump_border = 0.1;
  	
+	printf("%f\n", vel.y);
+
 	if (jump && abs(vel.y) < jump_border)
 	{	
 		jump_border = 0.01;
-		vel.y += 5;
+		vel.y += 4;
 		rp3d::Vector3 force(vel.x, vel.y, vel.z);
 		body->setLinearVelocity(force);
 	}
@@ -389,4 +391,20 @@ void Player::make_jump()
 
 	rp3d::Vector3 force(0, 1000, 0);
 	body->applyForceToCenterOfMass(force);
+}
+
+void Player::test_shoot(rp3d::DynamicsWorld *world)
+{
+	rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
+	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
+	rp3d::Transform transform(initPosition, initOrientation);
+	body = world->createRigidBody(transform);
+
+	const rp3d::Vector3 shapeData(0,0,0);
+	shape = new rp3d::BoxShape(shapeData, 0.1);
+
+	rp3d::Transform transform2 = rp3d::Transform::identity();
+	rp3d::decimal mass = rp3d::decimal(4.0);
+	proxyShape = body->addCollisionShape(shape, transform2, mass);
+
 }

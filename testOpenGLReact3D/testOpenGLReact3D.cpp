@@ -109,14 +109,14 @@ void OnTimer(int id)
 {
 	glutTimerFunc(17, OnTimer, 0);
 
-	if (keystate['w'])
-		cam.move(FORWARD);
-	if (keystate['s'])
-		cam.move(BACK);
-	if (keystate['d'])
-		cam.move(RIGHT);
-	if (keystate['a'])
-		cam.move(LEFT);
+	//if (keystate['w'])
+	//	cam.move(FORWARD);
+	//if (keystate['s'])
+	//	cam.move(BACK);
+	//if (keystate['d'])
+	//	cam.move(RIGHT);
+	//if (keystate['a'])
+	//	cam.move(LEFT);
 
 	if (keystate['u'])
 		player->cam.rotate(UP, 2.5);
@@ -124,16 +124,16 @@ void OnTimer(int id)
 	if (keystate['o'])
 		player->cam.rotate(DOWN, 2.5);
 		//player->rotate2(RIGHT, 0.04);
-	if (keystate['i'])
+	if (keystate['w'])
 		player->set_control(0);
 		//player->move(FORWARD);
-	if (keystate['k'])
+	if (keystate['s'])
 		player->set_control(1);
 		//player->move(BACK);
-	if (keystate['j'])
+	if (keystate['a'])
 		player->set_control(2);
 		//player->move(LEFT);
-	if (keystate['l'])
+	if (keystate['d'])
 		player->set_control(3);
 		//player->move(RIGHT);
 
@@ -164,16 +164,16 @@ void OnKeyPress(unsigned char key, int x, int y) {
 // Obsługa zdarzenia puszczenia klawisza.
 void OnKeyUp(unsigned char key, int x, int y) 
 {
-	if (key == 'i')
+	if (key == 'w')
 		player->unset_control(0);
 		//player->stop();
-	if (key == 'k')
+	if (key == 's')
 		player->unset_control(1);
 		//player->stop();
-	if (key == 'j')
+	if (key == 'a')
 		player->unset_control(2);
 		//player->stop();
-	if (key == 'l')
+	if (key == 'd')
 		player->unset_control(3);
 		//player->stop();
 	if (key == ' ')
@@ -215,12 +215,13 @@ void Idle()
 
 void MouseButton(int button, int state, int x, int y)
 {
-	Display();
+	
 }
 
 // obsługa ruchu kursora myszki
 void MousePassiveMotion(int x, int y)
 {
+	//CAMERA ROTATION
 	if (x > 600 || x < 200 || y > 450 || y < 150)
 	{
 		glutWarpPointer(400, 300);
@@ -240,8 +241,6 @@ void MousePassiveMotion(int x, int y)
 		player->cam.rotate(DOWN, my - y);
 	//player->rotate2(DOWN, (float)(mx - x) / 100);
 	mx = x; my = y;
-
-	//Display();
 }
 
 void MouseMotion(int x, int y)
