@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Player.h"
+#include "OPlayer.h"
 #include <GL\freeglut.h>
 
 #define RAD  0.01745329
@@ -25,7 +25,7 @@ Player::Player(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Qua
 
 	//ROTATION
 	Yaw = 0; Roll = 0; Pitch = 0;
-	
+
 	//CAMERA
 	cam.sync(initPosition, Yaw, Roll, Pitch);
 
@@ -46,7 +46,7 @@ Player::~Player()
 void Player::update()
 {
 	rp3d::Transform trans = body->getTransform();
-	
+
 	cam.sync(trans.getPosition(), Yaw, Roll, Pitch);
 	//cam.set();
 	unrotate();
@@ -119,12 +119,12 @@ void Player::unrotate()
 {
 	rp3d::Vector3 angv(0, 0, 0);
 	body->setAngularVelocity(angv);
-	
+
 	rp3d::Transform trans = body->getTransform();
 	rp3d::Quaternion orient = trans.getOrientation();
 
 	QuaternionO2IToEulerAngles(&Yaw, &Pitch, &Roll, orient);
-	
+
 	if (Pitch > 0.1 || Roll > 0.1 || Pitch < -0.1 || Roll < -0.1)
 	{
 		rp3d::Quaternion o(0, Yaw, 0);
@@ -200,7 +200,7 @@ void Player::move(Direction dir)
 	{
 		max_speed.normalize();
 		max_speed *= 5;
-	
+
 	}
 	rp3d::Vector3 new_vel(max_speed.x, new_y, max_speed.y);
 	body->setLinearVelocity(new_vel);
@@ -296,69 +296,69 @@ void Player::serve_controls()
 
 	if (vel.y < -0.1)
 		jump_border = 0.1;
- 	
+
 	printf("%f\n", vel.y);
 
 	if (jump && abs(vel.y) < jump_border)
-	{	
+	{
 		jump_border = 0.01;
 		vel.y += 4;
 		rp3d::Vector3 force(vel.x, vel.y, vel.z);
 		body->setLinearVelocity(force);
 	}
-	
-	
-		rp3d::Transform trans = body->getTransform();
-		rp3d::Quaternion orient = trans.getOrientation();
 
-		float x = 0;
-		float y = 0;
-		float z = 0;
 
-		float speed = 5;
+	rp3d::Transform trans = body->getTransform();
+	rp3d::Quaternion orient = trans.getOrientation();
 
-		if (w ^ s)	//XOR
+	float x = 0;
+	float y = 0;
+	float z = 0;
+
+	float speed = 5;
+
+	if (w ^ s)	//XOR
+	{
+		if (w)
 		{
-			if (w)
-			{
-				x = sin(Yaw)*speed;
-				z = cos(Yaw)*speed;
-			}
-			if (s)
-			{
-				x = -sin(Yaw)*speed;
-				z = -cos(Yaw)*speed;
-			}
+			x = sin(Yaw)*speed;
+			z = cos(Yaw)*speed;
 		}
-
-		if (a ^ d)	//XOR
+		if (s)
 		{
-			if (a)
-			{
-				x += sin(Yaw + PI_2)*speed;
-				z += cos(Yaw + PI_2)*speed;
-			}
-			if (d)
-			{
-				x += -sin(Yaw + PI_2)*speed;
-				z += -cos(Yaw + PI_2)*speed;
-			}
+			x = -sin(Yaw)*speed;
+			z = -cos(Yaw)*speed;
 		}
+	}
 
-		float new_x = x ;
-		float new_z = z ;
-		float new_y = y + vel.y;
-
-		rp3d::Vector2 max_speed(new_x, new_z);
-		if (max_speed.length() > 5)
+	if (a ^ d)	//XOR
+	{
+		if (a)
 		{
-			max_speed.normalize();
-			max_speed *= 5;
-
+			x += sin(Yaw + PI_2)*speed;
+			z += cos(Yaw + PI_2)*speed;
 		}
-		rp3d::Vector3 new_vel(max_speed.x, new_y, max_speed.y);
-		body->setLinearVelocity(new_vel);
-	
+		if (d)
+		{
+			x += -sin(Yaw + PI_2)*speed;
+			z += -cos(Yaw + PI_2)*speed;
+		}
+	}
+
+	float new_x = x;
+	float new_z = z;
+	float new_y = y + vel.y;
+
+	rp3d::Vector2 max_speed(new_x, new_z);
+	if (max_speed.length() > 5)
+	{
+		max_speed.normalize();
+		max_speed *= 5;
+
+	}
+	rp3d::Vector3 new_vel(max_speed.x, new_y, max_speed.y);
+	body->setLinearVelocity(new_vel);
+
 	//prev = vel.y;
 }
 
@@ -379,7 +379,7 @@ void Player::look_vertical(float angle)
 	//cam.rotate(UP, angle);
 	else
 		cam.ly -= 0.5;
-		//cam.rotate(DOWN, angle);
+	//cam.rotate(DOWN, angle);
 }
 
 void Player::make_jump()

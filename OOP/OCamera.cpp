@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "Camera.h"
+#include "OCamera.h"
 #include <cmath>
 #include <GL\freeglut.h>
 #define PI180 0.01745329
@@ -53,12 +53,12 @@ void Camera::move(Direction dir)
 		break;
 	}
 
-	float proportion = 1/sqrt(pow(lx, 2) + pow(lz, 2));
+	float proportion = 1 / sqrt(pow(lx, 2) + pow(lz, 2));
 
 	//przod i tyl
 	z += lz*dz*proportion;
 	x += lx*dz*proportion;
-	
+
 	//lewo i prawo
 	float beta = atan2(lz, lx);
 	z += cos(-beta) * dx;
@@ -114,7 +114,7 @@ void Camera::set()
 	//3per
 	//gluLookAt(x-2*lx, y-ly, z-2*lz, x+lx, y+ly, z+lz, 0, 1, 0);
 	//1per
-	gluLookAt(x , y , z , x + lx, y + ly, z + lz, 0, 1, 0);
+	gluLookAt(x, y, z, x + lx, y + ly, z + lz, 0, 1, 0);
 }
 
 void Camera::sync(rp3d::Vector3 pos, float yaw, float roll, float pitch)
@@ -122,11 +122,11 @@ void Camera::sync(rp3d::Vector3 pos, float yaw, float roll, float pitch)
 	x = pos.x;
 	y = pos.y;
 	z = pos.z;
-	
+
 	float tx = sin(yaw),
-	//ty = ly,
-	tz = cos(yaw);
-	
+		//ty = ly,
+		tz = cos(yaw);
+
 	float dlxz = sqrt(pow(tx, 2) + pow(tz, 2));
 	float dly = sqrt(1 - pow(ly, 2));
 
