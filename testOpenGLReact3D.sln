@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testOpenGLReact3D", "testOp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OOP", "OOP\OOP.vcxproj", "{024A8648-8FB0-4180-8B91-91A07E9A4170}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CollisionRetrieving", "CollisionRetrieving\CollisionRetrieving.vcxproj", "{424AB74C-949F-4652-BE46-C0DD856DFAA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{024A8648-8FB0-4180-8B91-91A07E9A4170}.Release|x64.Build.0 = Release|x64
 		{024A8648-8FB0-4180-8B91-91A07E9A4170}.Release|x86.ActiveCfg = Release|Win32
 		{024A8648-8FB0-4180-8B91-91A07E9A4170}.Release|x86.Build.0 = Release|Win32
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Debug|x64.ActiveCfg = Debug|x64
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Debug|x64.Build.0 = Debug|x64
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Debug|x86.ActiveCfg = Debug|Win32
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Debug|x86.Build.0 = Debug|Win32
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Release|x64.ActiveCfg = Release|x64
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Release|x64.Build.0 = Release|x64
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Release|x86.ActiveCfg = Release|Win32
+		{424AB74C-949F-4652-BE46-C0DD856DFAA3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

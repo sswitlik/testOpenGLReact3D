@@ -1,16 +1,10 @@
-// OOP.cpp : Defines the entry point for the console application.
-
-#include "stdafx.h"
-#include "reactphysics3d.h"
-#include "OGame.h"
-#include <GL\freeglut.h>
+#include "OpenGL.h"
+#include "GL/freeglut.h"
 
 //MOUSE
 int mx, my;
 //Keyboard
 bool keystate[256];
-
-Game *game;
 
 void Display()
 {
@@ -19,15 +13,15 @@ void Display()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glEnable(GL_DEPTH_TEST);
-
-	game->setCamera();
+	//cam.set();
+	player->cam.set();
 	float matrix[16];
 
 
 	//FLOOR
 	glPushMatrix();
 	matrix[16];
-	game->Draw_floor(matrix);
+	game.Draw_floor(matrix);
 	glMultMatrixf(matrix);
 	glScalef(20, 1, 20);
 	glColor3f(0.5, 0, 0);
@@ -39,7 +33,7 @@ void Display()
 	//OBJ
 	glPushMatrix();
 	matrix[16];
-	game->Draw_1(matrix);
+	game.Draw_1(matrix);
 	glMultMatrixf(matrix);
 	//glScalef(20, 1, 20);
 	glColor3f(0, 0, 0.5);
@@ -145,7 +139,7 @@ void OnKeyDown(unsigned char key, int x, int y)
 		glutLeaveMainLoop();
 	}
 	if (key == 'x')
-		game->plus();
+		game.plus();
 }
 
 void OnKeyPress(unsigned char key, int x, int y) {
@@ -249,38 +243,3 @@ void EntryFunc(int state)
 {
 	;
 }
-
-int main(int argc, char * argv[])
-{
-	game = new Game;
-
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(800, 600);
-	glutInitWindowPosition(5, 5);
-	glutCreateWindow("LOL");
-	glutSetCursor(GLUT_CURSOR_NONE);
-
-	glutDisplayFunc(Display);
-	glutReshapeFunc(Reshape);
-	//KEYBOARD
-	glutKeyboardFunc(OnKeyPress);
-	glutKeyboardUpFunc(OnKeyUp);
-	//MOUSE
-	glutMouseFunc(MouseButton);
-	glutMotionFunc(MouseMotion);
-	glutEntryFunc(EntryFunc);
-	glutPassiveMotionFunc(MousePassiveMotion);
-	glutSetKeyRepeat(GLUT_KEY_REPEAT_DEFAULT);
-	//TIMER
-	glutTimerFunc(17, OnTimer, 0);
-
-	glutIdleFunc(Idle);
-
-	glutMainLoop();
-
-	delete game;
-	return 0;
-}
-
-

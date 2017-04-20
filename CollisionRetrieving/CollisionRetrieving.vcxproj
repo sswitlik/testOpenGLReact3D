@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{024A8648-8FB0-4180-8B91-91A07E9A4170}</ProjectGuid>
+    <ProjectGuid>{424AB74C-949F-4652-BE46-C0DD856DFAA3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>OOP</RootNamespace>
+    <RootNamespace>CollisionRetrieving</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -94,6 +94,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Programowanie\biblioteki\freeglutMSVC\freeglut\lib;C:\Programowanie\biblioteki\react3d\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;reactphysics3d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -147,22 +148,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
-    <ClInclude Include="OBodyObj.h" />
-    <ClInclude Include="OCamera.h" />
-    <ClInclude Include="OGame.h" />
-    <ClInclude Include="OpenGL.h" />
-    <ClInclude Include="OPlayer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OBodyObj.cpp" />
-    <ClCompile Include="OCamera.cpp" />
-    <ClCompile Include="OGame.cpp" />
-    <ClCompile Include="OOP.cpp" />
-    <ClCompile Include="OpenGL.cpp" />
-    <ClCompile Include="OPlayer.cpp" />
+    <ClCompile Include="CollisionRetrieving.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

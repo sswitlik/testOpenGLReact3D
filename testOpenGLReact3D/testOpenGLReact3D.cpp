@@ -16,6 +16,7 @@ int mx, my;
 //Keyboard
 bool keystate[256];
 
+
 void Display()
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -69,7 +70,7 @@ void Display()
 			matrix[16];
 			game.objs[i].Draw(matrix);
 			glMultMatrixf(matrix);
-			glColor3f(0, 0.05*i, 0.05*i);
+			glColor3f(0, 0.05*i+0.1, 0.05*i);
 			glutSolidCube(1);
 			glColor3f(0, 0, 0);
 			glutWireCube(1);
