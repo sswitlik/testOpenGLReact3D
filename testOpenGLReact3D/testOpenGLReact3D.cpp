@@ -24,7 +24,9 @@ void Display()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glEnable(GL_DEPTH_TEST);
-	//cam.set();
+
+	Player *player = game.getplayer();
+
 	player->cam.set();
 	float matrix[16];
 	
@@ -110,37 +112,23 @@ void OnTimer(int id)
 {
 	glutTimerFunc(17, OnTimer, 0);
 
-	//if (keystate['w'])
-	//	cam.move(FORWARD);
-	//if (keystate['s'])
-	//	cam.move(BACK);
-	//if (keystate['d'])
-	//	cam.move(RIGHT);
-	//if (keystate['a'])
-	//	cam.move(LEFT);
+	Player *player = game.getplayer();
 
 	if (keystate['u'])
 		player->cam.rotate(UP, 2.5);
-		//player->rotate2(LEFT, 0.04);
 	if (keystate['o'])
 		player->cam.rotate(DOWN, 2.5);
-		//player->rotate2(RIGHT, 0.04);
 	if (keystate['w'])
 		player->set_control(0);
-		//player->move(FORWARD);
 	if (keystate['s'])
 		player->set_control(1);
-		//player->move(BACK);
 	if (keystate['a'])
 		player->set_control(2);
-		//player->move(LEFT);
 	if (keystate['d'])
 		player->set_control(3);
-		//player->move(RIGHT);
 
 	if (keystate[' '])
 		player->set_control(4);
-		//player->jump();
 }
 
 void OnKeyDown(unsigned char key, int x, int y)
@@ -151,6 +139,8 @@ void OnKeyDown(unsigned char key, int x, int y)
 	}
 	if (key == 'x')
 		game.plus();
+	if (key == 'z')
+		game.testshoot();
 }
 
 void OnKeyPress(unsigned char key, int x, int y) {
@@ -165,21 +155,18 @@ void OnKeyPress(unsigned char key, int x, int y) {
 // Obsługa zdarzenia puszczenia klawisza.
 void OnKeyUp(unsigned char key, int x, int y) 
 {
+	Player *player = game.getplayer();
+
 	if (key == 'w')
 		player->unset_control(0);
-		//player->stop();
 	if (key == 's')
 		player->unset_control(1);
-		//player->stop();
 	if (key == 'a')
 		player->unset_control(2);
-		//player->stop();
 	if (key == 'd')
 		player->unset_control(3);
-		//player->stop();
 	if (key == ' ')
 		player->unset_control(4);
-		//player->stop();
 
 	keystate[key] = false;
 }
@@ -190,19 +177,8 @@ void KeyboardFunc(unsigned char key, int x, int y)
 	{
 	case 27:
 		exit(0);
-
-	//case 'w':   cam.move(FORWARD);	break;
-	//case 's':   cam.move(BACK);		break;
-	//case 'd':   cam.move(RIGHT);	break;
-	//case 'a':   cam.move(LEFT);	break;
-	//case 'q':   cam.rotate(UP,1);	    break;
-	//case 'e':   cam.rotate(DOWN,1);	break;
-	//case 'z':	game.Update();		break;
-	//case 'x':	game.plus();		break;
 	}
 
-
-	//Reshape( glutGet( GLUT_WINDOW_WIDTH ), glutGet( GLUT_WINDOW_HEIGHT ) );
 	Display();
 }
 
@@ -210,7 +186,7 @@ void KeyboardFunc(unsigned char key, int x, int y)
 void Idle()
 {
 	game.Update();
-	player->update();
+	//player->update();
 	glutPostRedisplay();
 }
 
@@ -222,6 +198,8 @@ void MouseButton(int button, int state, int x, int y)
 // obsługa ruchu kursora myszki
 void MousePassiveMotion(int x, int y)
 {
+	Player *player = game.getplayer();
+
 	//CAMERA ROTATION
 	if (x > 600 || x < 200 || y > 450 || y < 150)
 	{
@@ -237,10 +215,8 @@ void MousePassiveMotion(int x, int y)
 		player->rotate2(LEFT, (float)(mx - x) / 100);
 	if (my - y > 0)
 		player->cam.rotate(UP, my - y);
-		//player->rotate2(UP, (float)(mx - x) / 100);
 	if (my - y < 0)
 		player->cam.rotate(DOWN, my - y);
-	//player->rotate2(DOWN, (float)(mx - x) / 100);
 	mx = x; my = y;
 }
 
@@ -257,13 +233,6 @@ void EntryFunc(int state)
 
 int main(int argc, char * argv[])
 {
-	//PLAYER
-	rp3d::Vector3 initPosition(1.0, 2.0, 2.0);
-	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
-	rp3d::Vector3 shapeData(0.25, 0.5, 0.25);
-
-	player = new Player(game.World, initPosition, initOrientation, shapeData);
-
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(800, 600);

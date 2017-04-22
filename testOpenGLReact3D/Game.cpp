@@ -8,13 +8,16 @@ Game::Game()
 	//TIME
 	previousFrameTime = 0;
 	accumulator = 0;
-	//PLAYER
-	//rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
-	//rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
-	//rp3d::Vector3 shapeData(10, 0.5, 10);
-
-	//player = new Player(World, initPosition, initOrientation, shapeData);
+	
+	//START WORLD
 	ExampleTestInit();
+
+	//PLAYER
+	rp3d::Vector3 initPosition(1.0, 2.0, 2.0);
+	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
+	rp3d::Vector3 shapeData(0.25, 0.5, 0.25);
+
+	player = new Player(World, initPosition, initOrientation, shapeData);
 }
 
 
@@ -44,7 +47,7 @@ void Game::ExampleTestInit()
 	initPosition.setAllValues(0.0, 1, 0.0);
 	initOrientation = rp3d::Quaternion::identity();
 	shapeData.setAllValues(10, 0.5, 10);
-	floor = new BodyObj(this->World, initPosition, initOrientation, shapeData);
+	floor = new BodyObj(this->World, initPosition, initOrientation, shapeData, 1);
 	floor->setType(1);
 	floor->setMaterial(0,1);
 
@@ -52,7 +55,7 @@ void Game::ExampleTestInit()
 	initPosition.setAllValues(0.0, 2.0, 0.0);
 	initOrientation = rp3d::Quaternion::identity();
 	shapeData.setAllValues(0.5, 0.5, 0.5);
-	obj1 = new BodyObj(this->World, initPosition, initOrientation, shapeData);
+	obj1 = new BodyObj(this->World, initPosition, initOrientation, shapeData, 2);
 	obj1->setMaterial(0.3,0.8);
 	obj1->setType(1);
 	//obj1->testset();
@@ -70,6 +73,9 @@ void Game::Draw_1(float m[16])
 
 void Game::Update()
 {
+	player->update();
+
+	///TIME UPDATE
 	if (previousFrameTime == 0)
 		previousFrameTime = glutGet(GLUT_ELAPSED_TIME) - 1;
 	// Constant physics time step 
@@ -116,7 +122,7 @@ void Game::plus()
 	initPosition.setAllValues(0.0, 15.0, 0.0);
 	initOrientation = rp3d::Quaternion::identity();
 	shapeData.setAllValues(0.5, 0.5, 0.5);
-	BodyObj obj(this->World, initPosition, initOrientation, shapeData);
+	BodyObj obj(this->World, initPosition, initOrientation, shapeData, 2);
 	obj.setMaterial(0.8,0.2);
 
 	objs.push_back(obj);
@@ -125,4 +131,15 @@ void Game::plus()
 void Game::rd()
 {
 	obj1->rd();
+}
+
+Player * Game::getplayer()
+{
+	return player;
+}
+
+void Game::testshoot()
+{
+	quantity++;
+	objs.push_back(player->test_shoot());
 }

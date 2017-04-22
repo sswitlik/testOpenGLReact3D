@@ -1,13 +1,16 @@
 #include "stdafx.h"
 #include "Player.h"
 #include <GL\freeglut.h>
+#include "Game.h"
 
 #define RAD  0.01745329
 #define PI_2 1.57079632679
 #define PIx2 6.28318530717
 
-Player::Player(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData)
+Player::Player(rp3d::DynamicsWorld *World, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData)
 {
+	world = World;
+
 	//PHYSICS
 	rp3d::Transform transform(initPosition, initOrientation);
 	body = world->createRigidBody(transform);
@@ -393,20 +396,19 @@ void Player::make_jump()
 	body->applyForceToCenterOfMass(force);
 }
 
-void Player::test_shoot(rp3d::DynamicsWorld *world)
+BodyObj Player::test_shoot()
 {
-	//rp3d::Transform t = body->getTransform;
-	//rp3d::Vector3 initPosition = t.getPosition;
-	//rp3d::Quaternion initOrientation(Roll, cam.ly *PI_2, Pitch);
-	//rp3d::Transform transform(initPosition, initOrientation);
-	//body = world->createRigidBody(transform);
+	rp3d::Transform t = body->getTransform();
+	rp3d::Vector3 initPosition = t.getPosition();
+	rp3d::Vector3 newposition(initPosition.x, initPosition.y + 0.5, initPosition.z);
+	rp3d::Quaternion initOrientation(Roll, cam.ly *PI_2, Pitch);
+	const rp3d::Vector3 shapeData(0.5,0.5,0.5);
 
-	////const rp3d::Vector3 shapeData(0,0,0);
-	//rp3d::SphereShape
-	//shape = new rp3d::SphereShape(0.2);
+	BodyObj bullet(world, newposition, initOrientation, shapeData, 10);
+	
+	rp3d::Vector3 force(cam.lx*10000, cam.ly * 10000, cam.lz * 10000);
+	bullet.body->applyForceToCenterOfMass(force);
 
-	//rp3d::Transform transform2 = rp3d::Transform::identity();
-	//rp3d::decimal mass = rp3d::decimal(4.0);
-	//proxyShape = body->addCollisionShape(shape, transform2, mass);
-
+	return bullet;
 }
+

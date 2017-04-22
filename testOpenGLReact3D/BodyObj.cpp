@@ -3,7 +3,7 @@
 #include <cmath>
 #define RAD  0.01745329
 
-BodyObj::BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData)
+BodyObj::BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData, rp3d::decimal mass)
 {
 	//rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
 	//initOrientation = rp3d::Quaternion::identity();
@@ -14,7 +14,7 @@ BodyObj::BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Q
 	shape = new rp3d::BoxShape(shapeData, 0.1);
 
 	rp3d::Transform transform2 = rp3d::Transform::identity();
-	rp3d::decimal mass = rp3d::decimal(4.0);
+	//rp3d::decimal mass = rp3d::decimal(4.0);
 	proxyShape = body->addCollisionShape(shape, transform2, mass);
 
 	//test 0.2

@@ -4,7 +4,7 @@
 class BodyObj
 {
 public:
-	BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData);
+	BodyObj(rp3d::DynamicsWorld *world, rp3d::Vector3 initPosition, rp3d::Quaternion initOrientation, rp3d::Vector3 shapeData, rp3d::decimal mass);
 	~BodyObj();
 	void Draw(float m[16]);
 	void setType(int type);
@@ -14,7 +14,7 @@ public:
 	void testset();
 	void rd();
 	float angle;
-private:
+//private:
 	rp3d::RigidBody *body;
 	rp3d::ProxyShape *proxyShape;
 	rp3d::BoxShape *shape;

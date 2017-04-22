@@ -1,8 +1,8 @@
 #pragma once
 #include "reactphysics3d.h"
 #include "Camera.h"
-
-
+#include "BodyObj.h"
+//#include "Game.h"
 
 class Player
 {
@@ -19,7 +19,7 @@ public:
 	void move2(Direction dir);
 	void rotate2(Direction dir, float angle);
 	void look_vertical(float angle);
-	void test_shoot(rp3d::DynamicsWorld *world);
+	BodyObj test_shoot();
 	void Draw(float m[16]);
 	
 	//void set();
@@ -45,6 +45,8 @@ private:
 	rp3d::RigidBody *body;
 	rp3d::ProxyShape *proxyShape;
 	rp3d::BoxShape *shape;
+
+	rp3d::DynamicsWorld *world;
 };
 
 

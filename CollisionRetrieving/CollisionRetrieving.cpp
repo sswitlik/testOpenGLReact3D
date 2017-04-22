@@ -110,6 +110,7 @@ void OnKeyDown(unsigned char key, int x, int y)
 	{ // ESC - wyjœcie
 		glutLeaveMainLoop();
 	}
+	
 }
 
 void OnKeyPress(unsigned char key, int x, int y) {
@@ -117,6 +118,7 @@ void OnKeyPress(unsigned char key, int x, int y) {
 	if (!keystate[key]) {
 		OnKeyDown(key, x, y); // Emulacja zdarzenia zwi¹zanego z pojedynczym wciœniêciem klawisza
 	}
+
 	keystate[key] = true;
 }
 
@@ -218,8 +220,8 @@ int main(int argc, char * argv[])
 	f_colors = new rp3d::Vector3(1, 0, 0);
 	fproxy->setUserData(f_colors);
 
-	fproxy->setCollisionCategoryBits(CATEGORY1);
-	fproxy->setCollideWithMaskBits(CATEGORY1 | CATEGORY2);
+	//fproxy->setCollisionCategoryBits(CATEGORY1);
+	//fproxy->setCollideWithMaskBits(CATEGORY1 | CATEGORY2);
 
 	rp3d::Material& fmaterial = fbody->getMaterial();
 	fmaterial.setBounciness(rp3d::decimal(0.3));
@@ -241,8 +243,8 @@ int main(int argc, char * argv[])
 	obj1_colors = new rp3d::Vector3(0, 0.1, 0);
 	proxy1->setUserData(obj1_colors);
 
-	proxy1->setCollisionCategoryBits(CATEGORY2);
-	proxy1->setCollideWithMaskBits(CATEGORY1 | CATEGORY2);
+	//proxy1->setCollisionCategoryBits(CATEGORY2);
+	//proxy1->setCollideWithMaskBits(CATEGORY1 | CATEGORY2);
 
 	rp3d::Material& material = body1->getMaterial();
 	material.setBounciness(rp3d::decimal(0.4));

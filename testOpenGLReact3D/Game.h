@@ -14,14 +14,16 @@ public:
 	void plus();
 	void Update();
 
+	//PLAYER
+	Player * getplayer();
+	void testshoot();
+
 	//nowe szesciany
 	int quantity;
 	std::vector <BodyObj> objs;
-	//PLAYER
-	//Player *player;
 	//test 0.2
 	void rd();
-//private:
+private:
 	rp3d::DynamicsWorld *World;
 
 	BodyObj *floor;
@@ -30,5 +32,8 @@ public:
 	////TIME
 	unsigned int previousFrameTime;
 	unsigned int accumulator;
-	
+
+	//PLAYER
+	Player *player;
+
 };
