@@ -59,7 +59,7 @@ void Display()
 	glPushMatrix();
 		player->Draw(matrix);
 		glMultMatrixf(matrix);
-		glScalef(0.5, 1, 0.5);
+		glScalef(0.25, 1, 0.25);
 		glColor3f(0, 0, 0.5);
 		//glutSolidCube(1);
 		glColor3f(1, 1, 1);
@@ -68,15 +68,16 @@ void Display()
 
 	for (int i = 0; i < game.quantity; i++)
 	{
-		glPushMatrix();
-			matrix[16];
-			game.objs[i].Draw(matrix);
-			glMultMatrixf(matrix);
-			glColor3f(0, 0.05*i+0.1, 0.05*i);
-			glutSolidCube(1);
-			glColor3f(0, 0, 0);
-			glutWireCube(1);
-		glPopMatrix();
+		game.objs[i]->Draw();
+		//glPushMatrix();
+		//	matrix[16];
+		//	game.objs[i].Draw(matrix);
+		//	glMultMatrixf(matrix);
+		//	glColor3f(0, 0.05*i+0.1, 0.05*i);
+		//	glutSolidCube(1);
+		//	glColor3f(0, 0, 0);
+		//	glutWireCube(1);
+		//glPopMatrix();
 	}
 
 

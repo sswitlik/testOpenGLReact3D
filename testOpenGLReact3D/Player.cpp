@@ -404,11 +404,11 @@ BodyObj Player::test_shoot()
 	rp3d::Quaternion initOrientation(Roll, cam.ly *PI_2, Pitch);
 	const rp3d::Vector3 shapeData(0.5,0.5,0.5);
 
-	BodyObj bullet(world, newposition, initOrientation, shapeData, 10);
+	BodyObj *bullet = new BodyObj(world, newposition, initOrientation, shapeData, 10);
 	
 	rp3d::Vector3 force(cam.lx*10000, cam.ly * 10000, cam.lz * 10000);
-	bullet.body->applyForceToCenterOfMass(force);
+	bullet->body->applyForceToCenterOfMass(force);
 
-	return bullet;
+	return *bullet;
 }
 

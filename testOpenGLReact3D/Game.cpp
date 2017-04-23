@@ -15,7 +15,7 @@ Game::Game()
 	//PLAYER
 	rp3d::Vector3 initPosition(1.0, 2.0, 2.0);
 	rp3d::Quaternion initOrientation = rp3d::Quaternion::identity();
-	rp3d::Vector3 shapeData(0.25, 0.5, 0.25);
+	rp3d::Vector3 shapeData(0.125, 0.5, 0.125);
 
 	player = new Player(World, initPosition, initOrientation, shapeData);
 }
@@ -122,8 +122,8 @@ void Game::plus()
 	initPosition.setAllValues(0.0, 15.0, 0.0);
 	initOrientation = rp3d::Quaternion::identity();
 	shapeData.setAllValues(0.5, 0.5, 0.5);
-	BodyObj obj(this->World, initPosition, initOrientation, shapeData, 2);
-	obj.setMaterial(0.8,0.2);
+	BodyObj *obj = new BodyObj(this->World, initPosition, initOrientation, shapeData, 2);
+	obj->setMaterial(0.8,0.2);
 
 	objs.push_back(obj);
 }
@@ -141,5 +141,6 @@ Player * Game::getplayer()
 void Game::testshoot()
 {
 	quantity++;
-	objs.push_back(player->test_shoot());
+	BodyObj *b = &(player->test_shoot());
+	objs.push_back(b);
 }

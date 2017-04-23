@@ -20,10 +20,10 @@ public:
 
 	//nowe szesciany
 	int quantity;
-	std::vector <BodyObj> objs;
+	std::vector <BodyObj *> objs;
 	//test 0.2
 	void rd();
-private:
+//private:
 	rp3d::DynamicsWorld *World;
 
 	BodyObj *floor;

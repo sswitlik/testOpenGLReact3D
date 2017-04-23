@@ -112,9 +112,9 @@ void Camera::rotate(Direction dir, float angle)
 void Camera::set()
 {
 	//3per
-	gluLookAt(x-2*lx, y-ly, z-2*lz, x+lx, y+ly, z+lz, 0, 1, 0);
+	//gluLookAt(x-2*lx, y-ly, z-2*lz, x+lx, y+ly, z+lz, 0, 1, 0);
 	//1per
-	//gluLookAt(x , y , z , x + lx, y + ly, z + lz, 0, 1, 0);
+	gluLookAt(x , y , z , x + lx, y + ly, z + lz, 0, 1, 0);
 }
 
 void Camera::sync(rp3d::Vector3 pos, float yaw, float roll, float pitch)
