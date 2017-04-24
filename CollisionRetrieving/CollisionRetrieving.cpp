@@ -35,6 +35,17 @@ rp3d::ProxyShape *proxy1;
 rp3d::CollisionShape *shape1;
 rp3d::Vector3 *obj1_colors;
 
+class MyEventListener : public rp3d::EventListener
+{
+	void beginContact(const rp3d::ContactPointInfo &contact)
+	{
+		rp3d::ProxyShape *ps = fproxy;
+		rp3d::Vector3 *fc = (rp3d::Vector3 *)ps->getUserData();
+		fc->y = 1;
+		fc->x = 0;
+	}
+};
+
 void Display()
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -187,8 +198,8 @@ void Idle()
 
 		rp3d::ProxyShape *ps = manifold->getShape1();
 		rp3d::Vector3 *fc = (rp3d::Vector3 *)ps->getUserData();
-		fc->y = 1;
-		fc->x = 0;
+		//fc->y = 1;
+		//fc->x = 0;
 	}
 
 //--------------------------------------------
@@ -202,6 +213,12 @@ int main(int argc, char * argv[])
 	world = new rp3d::DynamicsWorld(gravity);
 	world->setNbIterationsVelocitySolver(15);
 	world->setNbIterationsPositionSolver(8);
+
+	MyEventListener listener;
+	world->setEventListener(&listener);
+/*
+	rp3d::EventListener l;
+	l.beginContact()*/
 
 //----------FLOOR----------------------------------
 	rp3d::Vector3 initPosition(0.0, -1.0, 0.0);
@@ -248,6 +265,7 @@ int main(int argc, char * argv[])
 
 	rp3d::Material& material = body1->getMaterial();
 	material.setBounciness(rp3d::decimal(0.4));
+	material.setRollingResistance(rp3d::decimal(0.001));
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -280,4 +298,5 @@ int main(int argc, char * argv[])
 	delete obj1_colors;
 	return 0;
 }
+
 
